@@ -127,8 +127,9 @@ $tableDaySwapper.addEventListener('input', tableSwapHandler);
 function tableSwapHandler(event) {
   const tbL = $tBody.children.length;
 
-  for (let i = 0; i <= tbL;) {
+  for (let i = 0; i <= $tBody.children.length;) {
     if ($tBody.children !== null) {
+      console.log($tBody.children.length);
       $tBody.children[i].remove();
 
     }
