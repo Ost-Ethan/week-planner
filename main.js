@@ -132,43 +132,57 @@ const $tableDaySwapper = document.querySelector('#table-day-swapper');
 $tableDaySwapper.addEventListener('input', tableSwapHandler);
 
 function tableSwapHandler(event) {
+  const tbL = $tBody.children.length;
 
+  for (let i = 0; i <= tbL;) {
+    if ($tBody.children !== null) {
+      $tBody.children[i].remove();
+
+    }
+
+  }
   switch (event.target.value) {
 
     case 'Monday':
-      data.mondayEvents.unshift(newEventData);
-      console.log('value of data.mondayEvents', data.mondayEvents);
+      for (let i = 0; i < data.mondayEvents.length; i++) {
+        $tBody.appendChild(renderEntry(data.MondayEvents[i]));
+      }
       break;
 
     case 'Tuesday':
-      data.tuesdayEvents.unshift(newEventData);
-      console.log('value of data.mondayEvents', data.mondayEvents);
+      for (let i = 0; i < data.tuesdayEvents.length; i++) {
+        $tBody.appendChild(renderEntry(data.tuesdayEvents[i]));
+      }
       break;
 
     case 'Wednesday':
-      data.wednesdayEvents.unshift(newEventData);
-      console.log('value of data.wednesdayEvents', data.wednesdayEvents);
+      for (let i = 0; i < data.wednesdayEvents.length; i++) {
+        $tBody.appendChild(renderEntry(data.wednesdayEvents[i]));
+      }
       break;
 
     case 'Thursday':
-      data.thursdayEvents.unshift(newEventData);
-      console.log('value of data.mondayEvents', data.mondayEvents);
+      for (let i = 0; i < data.thursdayEvents.length; i++) {
+        $tBody.appendChild(renderEntry(data.thursdayEvents[i]));
+      }
       break;
 
     case 'Friday':
-      data.fridayEvents.unshift(newEventData);
-      console.log('value of data.mondayEvents', data.mondayEvents);
+      for (let i = 0; i < data.fridayEvents.length; i++) {
+        $tBody.appendChild(renderEntry(data.fridayEvents[i]));
+      }
       break;
 
     case 'Saturday':
-      data.saturdayEvents.unshift(newEventData);
-      console.log('value of data.mondayEvents', data.mondayEvents);
+      for (let i = 0; i < data.saturdayEvents.length; i++) {
+        $tBody.appendChild(renderEntry(data.saturdayEvents[i]));
+      }
       break;
 
     case 'Sunday':
-      data.sundayEvents.unshift(newEventData);
-      console.log('value of data.mondayEvents', data.mondayEvents);
+      for (let i = 0; i < data.sundayEvents.length; i++) {
+        $tBody.appendChild(renderEntry(data.sundayEvents[i]));
+      }
       break;
   }
-
 }
