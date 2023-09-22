@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Week Planner</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div id="new-event-modal" class="hidden">
-      <div class="modal-message-box">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Week Planner</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div id="new-event-modal" class="hidden">
+    <div class="modal-message-box">
+      <form id="new-event-form">
         <p>Time of event</p>
-        <select>
+        <select id="time-of-event">
           <option>12 AM</option>
           <option>1 AM</option>
           <option>2 AM</option>
@@ -37,7 +40,7 @@
           <option>11 PM</option>
         </select>
         <p>Day of week</p>
-        <select>
+        <select id="day-of-event">
           <option>Sunday</option>
           <option>Monday</option>
           <option>Tuesday</option>
@@ -47,82 +50,84 @@
           <option>Saturday</option>
         </select>
         <p>Event information</p>
-        <textarea></textarea>
+        <textarea id="event-information"></textarea>
         <div>
           <button id="cancel-button">Cancel</button>
           <button id="confirm-button">Confirm</button>
         </div>
+      </form>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="column-max">
+        <h1>Weekly Planner</h1>
       </div>
     </div>
-    <div class="container">
-      <div class="row">
-        <div class="column-max">
-          <h1>Weekly Planner</h1>
-        </div>
+    <div class="row">
+      <div class="column-max">
+        <h2>Choose Day to Show Events</h2>
       </div>
-      <div class="row">
-        <div class="column-max">
-          <h2>Choose Day to Show Events</h2>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column-max">
-          <div class="day-selector">
-            <div>Day of Week</div>
-            <select>
-              <option>Option1</option>
-            </select>
-          </div>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column-max">
-          <button class="add-new-event">Add New Event</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="column-max">
-          <div class="table">
-            <table>
-              <thead>
-                <tr>
-                  <th>Time</th>
-                  <th>Event</th>
-                  <th>Actions</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-                <tr>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
+    </div>
+    <div class="row">
+      <div class="column-max">
+        <div class="day-selector">
+          <div>Day of Week</div>
+          <select>
+            <option>Option1</option>
+          </select>
         </div>
       </div>
     </div>
-    <script src="main.js"></script>
-  </body>
+    <div class="row">
+      <div class="column-max">
+        <button class="add-new-event">Add New Event</button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column-max">
+        <div class="table">
+          <table>
+            <thead>
+              <tr>
+                <th>Time</th>
+                <th>Event</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
 </html>
