@@ -22,18 +22,19 @@ function handleModalButton(event) {
       time: $eventTime.value,
       day: $eventDay.value,
       event: $eventNotes.value,
-      entryId:data.entryId
+      entryId: data.entryId
     };
+    // data.unshift(newEventData);
     data.entryId++;
-    console.log('value of newEventData', newEventData);
-    console.dir(newEventData.event);
-    for (let i = 0; i < $trElementsArray.length; i++){
+    for (let i = 0; i < $trElementsArray.length; i++) {
       const currentEvent = $trElementsArray[i].getAttribute('data-entry-id');
-      if (Number(currentEvent) === newEventData.entryId){
-
+      if (Number(currentEvent) === newEventData.entryId) {
+        $tBody.replaceChild(renderEntry(newEventData), $trElementsArray[i]);
       }
     }
-    $tBody.appendChild(renderEntry(newEventData));
+    if ((newEventData.entryId) > 5) {
+      $tBody.appendChild(renderEntry(newEventData));
+    }
     $newEventModal.setAttribute('class', 'hidden');
   }
 }
