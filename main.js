@@ -52,15 +52,22 @@ const $eventForm = document.querySelector('#new-event-form');
 function renderEntry(newEventData) {
   const $trEntry = document.createElement('tr');
   const $tdTime = document.createElement('td');
-  const $tdDay = document.createElement('td');
+  const $tdActions = document.createElement('td');
   const $tdInfo = document.createElement('td');
+  const $editButton = document.createElement('button');
+  $editButton.setAttribute('id', 'edit-button');
+  const $deleteButton = document.createElement('button');
+  $deleteButton.setAttribute('id', 'delete-button');
 
   $trEntry.appendChild($tdTime);
-  $trEntry.appendChild($tdDay);
   $trEntry.appendChild($tdInfo);
+  $trEntry.appendChild($tdActions);
+  $tdActions.appendChild($editButton);
+  $tdActions.appendChild($deleteButton);
+  // $trEntry.appendChild('placeholder');
 
   $tdTime.textContent = newEventData.time;
-  $tdDay.textContent = newEventData.day;
+  $tdActions.textContent = newEventData.day;
   $tdInfo.textContent = newEventData.event;
 
   console.log('value of $trEntry', $trEntry);

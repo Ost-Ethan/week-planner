@@ -13,7 +13,7 @@
     <div class="modal-message-box">
       <form id="new-event-form">
         <p>Time of event</p>
-        <select id="time-of-event">
+        <select id="time-of-event" required>
           <option>12 AM</option>
           <option>1 AM</option>
           <option>2 AM</option>
@@ -40,7 +40,7 @@
           <option>11 PM</option>
         </select>
         <p>Day of week</p>
-        <select id="day-of-event">
+        <select id="day-of-event" required>
           <option>Sunday</option>
           <option>Monday</option>
           <option>Tuesday</option>
@@ -50,7 +50,7 @@
           <option>Saturday</option>
         </select>
         <p>Event information</p>
-        <textarea id="event-information"></textarea>
+        <textarea id="event-information" required></textarea>
         <div>
           <button id="cancel-button">Cancel</button>
           <button id="confirm-button">Confirm</button>
@@ -74,7 +74,13 @@
         <div class="day-selector">
           <div>Day of Week</div>
           <select>
-            <option>Option1</option>
+            <option>Sunday</option>
+            <option>Monday</option>
+            <option>Tuesday</option>
+            <option>Wednesday</option>
+            <option>Thursday</option>
+            <option>Friday</option>
+            <option>Saturday</option>
           </select>
         </div>
       </div>
