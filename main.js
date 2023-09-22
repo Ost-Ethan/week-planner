@@ -1,3 +1,15 @@
+// Data Model
+const data = {
+  mondayEvents: [],
+  tuesdayEvents: [],
+  wednesdayEvents: [],
+  thursdayEvents: [],
+  fridayEvents: [],
+  saturdayEvents: [],
+  sundayEvents: [],
+  entryId: 1
+};
+
 const $addEventButton = document.querySelector('.add-new-event');
 const $newEventModal = document.querySelector('#new-event-modal');
 const $tBody = document.querySelector('tbody');
@@ -36,13 +48,47 @@ function handleModalButton(event) {
       $tBody.appendChild(renderEntry(newEventData));
     }
     $newEventModal.setAttribute('class', 'hidden');
+
+    switch (newEventData.day) {
+
+      case 'Monday':
+        data.mondayEvents.unshift(newEventData);
+        console.log('value of data.mondayEvents', data.mondayEvents);
+        break;
+
+      case 'Tuesday':
+        data.tuesdayEvents.unshift(newEventData);
+        console.log('value of data.mondayEvents', data.mondayEvents);
+        break;
+
+      case 'Wednesday':
+        data.wednesdayEvents.unshift(newEventData);
+        console.log('value of data.wednesdayEvents', data.wednesdayEvents);
+        break;
+
+      case 'Thursday':
+        data.thursdayEvents.unshift(newEventData);
+        console.log('value of data.mondayEvents', data.mondayEvents);
+        break;
+
+      case 'Friday':
+        data.fridayEvents.unshift(newEventData);
+        console.log('value of data.mondayEvents', data.mondayEvents);
+        break;
+
+      case 'Saturday':
+        data.saturdayEvents.unshift(newEventData);
+        console.log('value of data.mondayEvents', data.mondayEvents);
+        break;
+
+      case 'Sunday':
+        data.sundayEvents.unshift(newEventData);
+        console.log('value of data.mondayEvents', data.mondayEvents);
+        break;
+    }
+
   }
 }
-
-const data = {
-  storedEvents: [],
-  entryId: 1
-};
 
 const $eventTime = document.querySelector('#time-of-event');
 const $eventDay = document.querySelector('#day-of-event');
@@ -66,10 +112,20 @@ function renderEntry(newEventData) {
   $tdActions.appendChild($deleteButton);
   // $trEntry.appendChild('placeholder');
 
+  $editButton.textContent = 'Edit';
+  $deleteButton.textContent = 'Delete';
   $tdTime.textContent = newEventData.time;
-  $tdActions.textContent = newEventData.day;
   $tdInfo.textContent = newEventData.event;
 
   console.log('value of $trEntry', $trEntry);
   return $trEntry;
+}
+
+const $tableDaySwapper = document.querySelector('#table-day-swapper');
+
+$tableDaySwapper.addEventListener('input', tableSwapHandler);
+
+function tableSwapHandler(event) {
+
+  console.dir(event);
 }
