@@ -44,15 +44,8 @@ function handleModalButton(event) {
     };
     // data.unshift(newEventData);
     data.entryId++;
-    for (let i = 0; i < $trElementsArray.length; i++) {
-      const currentEvent = $trElementsArray[i].getAttribute('data-entry-id');
-      if (Number(currentEvent) === newEventData.entryId) {
-        $tBody.replaceChild(renderEntry(newEventData), $trElementsArray[i]);
-      }
-    }
-    if ((newEventData.entryId) > 5) {
-      $tBody.appendChild(renderEntry(newEventData));
-    }
+
+    $tBody.prepend(renderEntry(newEventData));
     $newEventModal.setAttribute('class', 'hidden');
 
     switch (newEventData.day) {
