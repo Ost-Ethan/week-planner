@@ -10,6 +10,12 @@ const data = {
   entryId: 1
 };
 
+window.addEventListener('beforeunload', storeData);
+function storeData(event) {
+  const storageData = JSON.stringify(data);
+  localStorage.setItem('dataStored', storageData);
+}
+
 const $addEventButton = document.querySelector('.add-new-event');
 const $newEventModal = document.querySelector('#new-event-modal');
 const $tBody = document.querySelector('tbody');
@@ -127,5 +133,42 @@ $tableDaySwapper.addEventListener('input', tableSwapHandler);
 
 function tableSwapHandler(event) {
 
-  console.dir(event);
+  switch (event.target.value) {
+
+    case 'Monday':
+      data.mondayEvents.unshift(newEventData);
+      console.log('value of data.mondayEvents', data.mondayEvents);
+      break;
+
+    case 'Tuesday':
+      data.tuesdayEvents.unshift(newEventData);
+      console.log('value of data.mondayEvents', data.mondayEvents);
+      break;
+
+    case 'Wednesday':
+      data.wednesdayEvents.unshift(newEventData);
+      console.log('value of data.wednesdayEvents', data.wednesdayEvents);
+      break;
+
+    case 'Thursday':
+      data.thursdayEvents.unshift(newEventData);
+      console.log('value of data.mondayEvents', data.mondayEvents);
+      break;
+
+    case 'Friday':
+      data.fridayEvents.unshift(newEventData);
+      console.log('value of data.mondayEvents', data.mondayEvents);
+      break;
+
+    case 'Saturday':
+      data.saturdayEvents.unshift(newEventData);
+      console.log('value of data.mondayEvents', data.mondayEvents);
+      break;
+
+    case 'Sunday':
+      data.sundayEvents.unshift(newEventData);
+      console.log('value of data.mondayEvents', data.mondayEvents);
+      break;
+  }
+
 }
