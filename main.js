@@ -6,3 +6,16 @@ function handleNewEvent(event) {
   $newEventModal.setAttribute('class', '');
 
 }
+
+$newEventModal.addEventListener('click', handleModalButton);
+
+function handleModalButton(event) {
+  if (event.target.getAttribute('id') === 'cancel-button') {
+    $newEventModal.setAttribute('class', 'hidden');
+  }
+  if (event.target.getAttribute('id') === 'confirm-button') {
+    $newEventModal.setAttribute('class', 'hidden');
+  }
+}
+
+// const newEventData = {}

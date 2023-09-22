@@ -1,101 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Week Planner</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <div id="new-event-modal" class="hidden">
-    <div class="modal-message-box">
-      <p>Time of event</p>
-      <select>
-        <option>5 o clock</option>
-      </select>
-      <p>Day of week</p>
-      <select>
-        <option>5 o clock</option>
-      </select>
-      <p>Event information</p>
-      <textarea></textarea>
-      <div>
-      <button> Cancel</button>
-      <button>Confirm</button>
-      </div>
-    </div>
-  </div>
-  <div class="container">
-    <div class="row">
-      <div class="column-max">
-        <h1>Weekly Planner</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column-max">
-        <h2>Choose Day to Show Events</h2>
-      </div>
-    </div>
-    <div class="row">
-      <div class="column-max">
-        <div class="day-selector">
-          <div>Day of Week</div>
-          <select>
-            <option>Option1</option>
-          </select>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week Planner</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="new-event-modal" class="hidden">
+      <div class="modal-message-box">
+        <p>Time of event</p>
+        <select>
+          <option>12 AM</option>
+          <option>1 AM</option>
+          <option>2 AM</option>
+          <option>3 AM</option>
+          <option>4 AM</option>
+          <option>5 AM</option>
+          <option>6 AM</option>
+          <option>7 AM</option>
+          <option>8 AM</option>
+          <option>9 AM</option>
+          <option>10 AM</option>
+          <option>11 AM</option>
+          <option>12 PM</option>
+          <option>1 PM</option>
+          <option>2 PM</option>
+          <option>3 PM</option>
+          <option>4 PM</option>
+          <option>5 PM</option>
+          <option>6 PM</option>
+          <option>7 PM</option>
+          <option>8 PM</option>
+          <option>9 PM</option>
+          <option>10 PM</option>
+          <option>11 PM</option>
+        </select>
+        <p>Day of week</p>
+        <select>
+          <option>Sunday</option>
+          <option>Monday</option>
+          <option>Tuesday</option>
+          <option>Wednesday</option>
+          <option>Thursday</option>
+          <option>Friday</option>
+          <option>Saturday</option>
+        </select>
+        <p>Event information</p>
+        <textarea></textarea>
+        <div>
+          <button id="cancel-button">Cancel</button>
+          <button id="confirm-button">Confirm</button>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="column-max">
-        <button class="add-new-event">Add New Event</button>
+    <div class="container">
+      <div class="row">
+        <div class="column-max">
+          <h1>Weekly Planner</h1>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="column-max">
-        <div class="table">
-          <table>
-            <thead>
-              <tr>
-                <th>Time</th>
-                <th>Event</th>
-                <th>Actions</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-              </tr>
-            </tbody>
-          </table>
+      <div class="row">
+        <div class="column-max">
+          <h2>Choose Day to Show Events</h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column-max">
+          <div class="day-selector">
+            <div>Day of Week</div>
+            <select>
+              <option>Option1</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column-max">
+          <button class="add-new-event">Add New Event</button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column-max">
+          <div class="table">
+            <table>
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Event</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  <script src="main.js"></script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>
