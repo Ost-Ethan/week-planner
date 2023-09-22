@@ -2,6 +2,7 @@ const $addEventButton = document.querySelector('.add-new-event');
 const $newEventModal = document.querySelector('#new-event-modal');
 const $tBody = document.querySelector('tbody');
 $addEventButton.addEventListener('click', handleNewEvent);
+const $trElementsArray = document.querySelectorAll('tr');
 
 function handleNewEvent(event) {
   $newEventModal.setAttribute('class', '');
@@ -20,17 +21,26 @@ function handleModalButton(event) {
     const newEventData = {
       time: $eventTime.value,
       day: $eventDay.value,
-      event: $eventNotes.value
+      event: $eventNotes.value,
+      entryId:data.entryId
     };
+    data.entryId++;
     console.log('value of newEventData', newEventData);
     console.dir(newEventData.event);
+    for (let i = 0; i < $trElementsArray.length; i++){
+      const currentEvent = $trElementsArray[i].getAttribute('data-entry-id');
+      if (Number(currentEvent) === newEventData.entryId){
+
+      }
+    }
     $tBody.appendChild(renderEntry(newEventData));
     $newEventModal.setAttribute('class', 'hidden');
   }
 }
 
 const data = {
-  storedEvents: []
+  storedEvents: [],
+  entryId: 1
 };
 
 const $eventTime = document.querySelector('#time-of-event');
