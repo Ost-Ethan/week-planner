@@ -7,8 +7,25 @@
   <title>Week Planner</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
+  <div id="new-event-modal" class="hidden">
+    <div class="modal-message-box">
+      <p>Time of event</p>
+      <select>
+        <option>5 o clock</option>
+      </select>
+      <p>Day of week</p>
+      <select>
+        <option>5 o clock</option>
+      </select>
+      <p>Event information</p>
+      <textarea></textarea>
+      <div>
+      <button> Cancel</button>
+      <button>Confirm</button>
+      </div>
+    </div>
+  </div>
   <div class="container">
     <div class="row">
       <div class="column-max">
@@ -23,7 +40,7 @@
     <div class="row">
       <div class="column-max">
         <div class="day-selector">
-          <p>Day of Week</p>
+          <div>Day of Week</div>
           <select>
             <option>Option1</option>
           </select>
@@ -32,7 +49,7 @@
     </div>
     <div class="row">
       <div class="column-max">
-        <button>Add New Event</button>
+        <button class="add-new-event">Add New Event</button>
       </div>
     </div>
     <div class="row">
